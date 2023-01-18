@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../pokedex_pokemon_detail/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../pokedex_pokemon_detail/.ios/Flutter/FlutterPluginRegistrant`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../pokedex_pokemon_detail/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../pokedex_pokemon_detail/.ios/Flutter/FlutterPluginRegistrant"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  FlutterPluginRegistrant: 58acfb6cb31ee4ca14f920aba101815efda113ee
+
+PODFILE CHECKSUM: 5a3aac7ded9560a52d89a49ccda0b13e0ae9a3f8
+
+COCOAPODS: 1.11.3
