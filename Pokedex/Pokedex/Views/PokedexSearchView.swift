@@ -10,6 +10,7 @@ import Flutter
 
 class PokedexSearchView: UITableViewController, UISearchBarDelegate {
     let controller = PokedexSearchController()
+    
     let secretKey = "Avocato3551"
 
     override func viewDidLoad() {
@@ -47,13 +48,13 @@ extension PokedexSearchView {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let pokemon = controller.pokemons[indexPath.row]
-        
-        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
        
-        // TODO: - Can I pass parameters to Flutter?
-        let flutterViewController =
-//        FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
-        FlutterViewController(project: nil, initialRoute: "/pokemon/detail?id=\(pokemon.id)&auth=asdfasd", nibName: nil, bundle: nil)
+        let flutterViewController = FlutterViewController(
+            project: nil,
+            initialRoute: "/pokemon/detail?id=\(pokemon.id)&auth=asdfasd",
+            nibName: nil,
+            bundle: nil
+        )
         
         //MARK: - add channels here
         let secretsChannel = FlutterMethodChannel(name: "br.edu.pss.pokedex/secrets", binaryMessenger: flutterViewController.binaryMessenger)
